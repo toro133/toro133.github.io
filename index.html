@@ -11,37 +11,46 @@
 </script>
     <meta charset="UTF-8">
     <title>Home Page</title>
+    <link rel="stylesheet" href="styles1.css">
 </head>
-
-    <h1>Home Page</h1>
-    <nav>
-        <a href="about.html">Hardware Components</a> |
-        <a href="guide.html">Buying Guide</a> |
-        <a href="troubleshooting.html">Troubleshooting</a> |
-        <a href="form.html">Contract Form</a>
-    </nav>
-        <form action="search.php" method="GET">
-            <input type="text" name="query" placeholder="Search...">
-            <button type="submit">Search</button>
-        </form>
-
-    
+<body>
+    <header>
+        <div class="header-left">
+            <h1>Home Page</h1>
+        </div>
+        <div class="header-right">
+            <nav>
+                <a href="about.html">Hardware Components</a> |
+                <a href="guide.html">Buying Guide</a> |
+                <a href="troubleshooting.html">Troubleshooting</a> |
+                <a href="form.html">Contact Form</a>
+            </nav>
+            <form action="search.php" method="GET">
+                <input type="text" name="query" placeholder="Search...">
+                <button type="submit">Search</button>
+            </form>
+        </div>
+    </header>
+    <main>
         <h2>Welcome to the Computer Hardware Guide!</h2>
         <p>At Computer Hardware Guide, we’re dedicated to helping you understand and navigate the complex world of computer hardware. Whether you’re a seasoned enthusiast or just starting your journey into building and upgrading PCs, we’ve got you covered.</p>
 
+
+    <div class="footer-left">
         <h3>Quick Links</h3>
         <ul>
             <li><a href="about.html">Hardware Components</a></li>
             <li><a href="guide.html">Buying Guide</a></li>
             <li><a href="troubleshooting.html">Troubleshooting</a></li>
-            <li><a href="form.html">Contract Form</a></li>
+            <li><a href="form.html">Contact Form</a></li>
         </ul>
-
-        <img src="whitepc.jpg" alt="White Gaming Computer">
-        <img src="blackpc.jpg" alt="Black Gaming Computer">
-
+    </div>
+    <div class="footer-right">
+        <img src="whitepc.jpg" alt="White Gaming Computer" style="width: 20">
+        <img src="blackpc.jpg" alt="Black Gaming Computer" style="width: 20">
+    </div>
     <footer>
-        <h1>PC Builder</h1>
+        <h3>PC Builder</h3>
         <nav>
             <a href="https://www.facebook.com">Facebook</a> |
             <a href="https://www.youtube.com">YouTube</a> |

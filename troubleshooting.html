@@ -2,31 +2,37 @@
 <html lang="en">
 <head>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-XEDFQZ57WH"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
 
-  gtag('config', 'G-XEDFQZ57WH');
-</script>
+        gtag('config', 'G-XEDFQZ57WH');
+    </script>
     <meta charset="UTF-8">
     <title>Troubleshooting</title>
+    <link rel="stylesheet" href="styles4.css">
 </head>
 <body>
-
-        <h1>Troubleshooting</h1>
-        <nav>
-            <a href="about.html">Hardware Components</a> |
-            <a href="guide.html">Buying Guide</a> |
-            <a href="troubleshooting.html">Troubleshooting</a> |
-            <a href="form.html">Contract Form</a>
-        </nav>
+    <header>
+        <div class="header-left">
+            <h1>Troubleshooting</h1>
+        </div>
+        <div class="header-right">
+            <nav>
+                <a href="about.html">Hardware Components</a> |
+                <a href="guide.html">Buying Guide</a> |
+                <a href="troubleshooting.html">Troubleshooting</a> |
+                <a href="form.html">Contact Form</a>
+            </nav>
             <form action="search.php" method="GET">
                 <input type="text" name="query" placeholder="Search...">
                 <button type="submit">Search</button>
             </form>
-        
-        <h2>Support Request FormS</h2>
+        </div>
+    </header>
+    <main>
+        <h2>Support Request Forms</h2>
         <p>Please fill out the form below to create a support ticket. Our team will review your issue and get back to you as soon as possible.</p>
         <form action="submit_contact.php" method="POST">
             <label>Name:</label><br>
@@ -39,10 +45,9 @@
             <input type="text" name="message" required><br>
             <input type="submit" value="Submit">
         </form>
-    
-
+    </main>
     <footer>
-        <h1>PC Builder</h1>
+        <h3>PC Builder</h3>
         <nav>
             <a href="https://www.facebook.com">Facebook</a> |
             <a href="https://www.youtube.com">YouTube</a> |
@@ -51,6 +56,5 @@
             <a href="https://www.blog.com">Blog</a>
         </nav>
     </footer>
-
 </body>
 </html>
