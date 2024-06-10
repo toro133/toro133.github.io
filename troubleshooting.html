@@ -12,6 +12,29 @@
     <meta charset="UTF-8">
     <title>Troubleshooting</title>
     <link rel="stylesheet" href="styles4.css">
+    <script>
+        function validateForm(event) {
+            event.preventDefault();
+            let name = document.forms["supportForm"]["name"].value;
+            let email = document.forms["supportForm"]["email"].value;
+            let subject = document.forms["supportForm"]["subject"].value;
+            let message = document.forms["supportForm"]["message"].value;
+            let emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+
+            if (name == "" || email == "" || subject == "" || message == "") {
+                alert("All fields must be filled out");
+                return false;
+            }
+
+            if (!email.match(emailPattern)) {
+                alert("Please enter a valid email address");
+                return false;
+            }
+
+            alert("Form submitted successfully!");
+            document.forms["supportForm"].submit();
+        }
+    </script>
 </head>
 <body>
     <header>
@@ -32,9 +55,9 @@
         </div>
     </header>
     <main>
-        <h2>Support Request Forms</h2>
+        <h2>Support Request Form</h2>
         <p>Please fill out the form below to create a support ticket. Our team will review your issue and get back to you as soon as possible.</p>
-        <form action="submit_contact.php" method="POST">
+        <form name="supportForm" action="submit_contact.php" method="POST" onsubmit="validateForm(event)">
             <label>Name:</label><br>
             <input type="text" name="name" required><br>
             <label>Email:</label><br>

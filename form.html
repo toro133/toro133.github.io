@@ -12,6 +12,29 @@
     <meta charset="UTF-8">
     <title>Contact Form</title>
     <link rel="stylesheet" href="styles5.css">
+    <script>
+        function validateForm(event) {
+            event.preventDefault();
+            let name = document.forms["contactForm"]["name"].value;
+            let email = document.forms["contactForm"]["email"].value;
+            let subject = document.forms["contactForm"]["subject"].value;
+            let message = document.forms["contactForm"]["message"].value;
+            let emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+
+            if (name == "" || email == "" || subject == "" || message == "") {
+                alert("All fields must be filled out");
+                return false;
+            }
+
+            if (!email.match(emailPattern)) {
+                alert("Please enter a valid email address");
+                return false;
+            }
+
+            alert("Form submitted successfully!");
+            document.forms["contactForm"].submit();
+        }
+    </script>
 </head>
 <body>
     <header>
@@ -35,7 +58,7 @@
         <h2>Contact Form</h2>
         <h3>Contact Us</h3>
         <p>Have a question or need assistance? Feel free to reach out to us using the form below.</p>
-        <form action="submit_contact.php" method="POST">
+        <form name="contactForm" action="submit_contact.php" method="POST" onsubmit="validateForm(event)">
             <label>Name:</label><br>
             <input type="text" name="name" required><br>
             <label>Email:</label><br>
